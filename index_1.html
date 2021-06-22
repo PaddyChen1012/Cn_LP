@@ -10,47 +10,154 @@
     <link rel="shortcut icon" href="images/大吉大利x-icon.png" type="image/x-icon">
     <meta name="robots" content="noindex">
     <style>
-        .vh-100{height:100vh;}
-        .pic-btn{height:3px;}
+        body{background: url(images/bg-wrap.png);}
+        .bg-white-50{background-color:rgba(255,255,255,.5);}
+        .h-400px{height:400px;}
+        .bottom-0{position:relative;bottom:20px;}
+        .pic-btn{width:10px !important;height:10px !important;border-radius:5px;border:none !important;}
+        .pic-btn.active{width:50px !important;}
+        .logo{top:0;left:5%;width:150px;height:120px;background:rgba(255,255,255,.5);border-radius:0 0 30px 30px;box-shadow:0 0 10px rgba(206,36,223,1);}
+        .download-box{bottom:10%;right:5%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.6);border-radius:20px;box-shadow:0 0 10px rgba(206,36,223,1);padding:16px;}
+        .qr-code{width:160px;height:160px;background:url(images/download.jpg)no-repeat center/contain;}
+        .msg-title{writing-mode:vertical-lr;text-align: center;font-size:1rem;}
+        .btn-box{height:160px;}
+        .go-btn{height:50px;line-height:50px;background:#fff;border-radius:10px;font-size:1.8rem;}
+        .a-none:hover{text-decoration:none;}
+        .download-hover:hover{background:rgba(255,255,255,.8);border-radius:10px;}
+        .more-wd{font-size:1rem;color:#ccc;}
+        .before:before{content:'';position:absolute;bottom:0;right:-60px;width:0;height:0;border-style:solid;border-width:200px 0 200px 60px;border-color:transparent transparent transparent rgba(206,36,223,.5);z-index:1;}
+        .word-box{padding:40px 90px;}
+        .text-shadow{text-shadow:1px 1px 0 rgb(255,187,0),1px 0px 0 rgb(255,187,0),1px -1px 0 rgb(255,187,0),0px -1px 0 rgb(255,187,0),-1px -1px 0 rgb(255,187,0),-1px 0px 0 rgb(255,187,0),-1px 1px 0 rgb(255,187,0);}
+        .left{transform:translateX(-110%);transition:transform .8s ease;background:linear-gradient(90deg,rgba(54,8,36,0) 0%,rgba(206,36,223,.5) 100%);z-index:1;}
+        .right{transform:translateX(110%);transition:transform .8s ease;}
+        .move .left,.move .right{transform: translateX(0);}
+        @media screen and (min-width:501px) {
+            .border-10{border-radius:10px;box-shadow:5px 5px 5px rgba(206,36,223,.5);transform: translate(-5px,-5px);transition: transform .2s ease;}
+            .border-10:hover{box-shadow:2px 2px 5px rgba(206,36,223,.5);transform: translate(0px,0px);}
+        }
+        @media screen and (max-width:500px) {
+            .ph-none{display:none;}
+            .download-box{flex-direction:column;}
+            .go-btn{margin:8px 0;}
+            .before:before{content:'';position:absolute;bottom:-30px;right:0px;width:0;height:0;border-style:solid;border-width:30px 50vw 0 50vw;border-color:#007bff transparent transparent transparent;z-index:1;}
+            .word-box{padding:40px 12px;}
+        }
     </style>
 </head>
 
 <body>
    
-    <div class="container-fluid p-0">
-        <div class="row mx-auto w-100">
-            <div id="carouselExampleIndicators" class="carousel slide w-100 vh-100 overflow-hidden" data-ride="carousel">
+    <div id="page0" class="container-fluid p-0">
+
+        <div class="row position-relative mx-auto w-100 vh-100">
+            <div id="carouselExampleIndicators" class="carousel slide w-100 h-100 overflow-hidden" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="pic-btn active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1" class="pic-btn"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2" class="pic-btn"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3" class="pic-btn"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4" class="pic-btn"></li>
                 </ol>
-                <div class="carousel-inner">
+                <div class="carousel-inner h-100">
                     <div class="carousel-item active">
-                        <img src="images/首存.jpg" class="d-block w-100" alt="...">
+                        <img src="images/LP0618(DT-)_1920x1080.jpg" class="d-block w-100 bottom-0" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/二存.jpg" class="d-block w-100" alt="...">
+                        <img src="images/LP0618(slot)_1920x1080.jpg" class="d-block w-100 bottom-0" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/返水.jpg" class="d-block w-100" alt="...">
+                        <img src="images/LP0618(fishing)_1920x1080.jpg" class="d-block w-100 bottom-0" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/LP0618(Baccarat)_1920x1080.jpg" class="d-block w-100 bottom-0" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/LP0618(discount)_1920x1080.jpg" class="d-block w-100 bottom-0" alt="...">
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-              </div>
-
+            </div>
+            <div class="position-absolute p-3 logo"><img src="images/大吉大利logo.png" alt="" class="w-100"></div>
+            <div class="position-absolute download-box">
+                <div class="d-flex">
+                    <div class="msg-title">掃描下載手機客戶端</div>
+                    <div class="qr-code mx-3"></div>
+                </div>
+                <div class="btn-box d-flex flex-column justify-content-between w-100">
+                    <a class="go-btn text-center font-weight-bold text-dark a-none download-hover" href="https://djdl777.com?ad=ataseo" target="_self">立即前往</a>
+                    <div class="d-flex justify-content-around">
+                        <a class="p-2 text-dark font-weight-bolder a-none download-hover" href="https://download.jdb168.online/djdl777/app.html" target="_self"><img src="images/logo-android.svg" alt="">安卓下載</a>
+                        <a class="p-2 text-dark font-weight-bolder a-none download-hover" href="https://download.jdb168.online/djdl777/app.html" target="_self"><img src="images/logo-apple.svg" alt="">蘋果下載</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page1" class="container my-4">
+        <h2 class="d-flex align-items-end justify-content-between text-light">老虎機試玩<a class="more-wd" href="https://djdl777.com?ad=ataseo" target="_self">更多...</a></h2>
+        <div class="row position-relative mx-auto w-100">
+            <div class="col-12 col-md mb-3"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/法老祕宝.png" alt=""></a></div>
+            <div class="col-12 col-md mb-3"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/象财神.png" alt=""></a></div>
+            <div class="col-12 col-md ph-none"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/台湾黑熊.png" alt=""></a></div>
+            <div class="col-12 col-md ph-none"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/甜蜜蜜.png" alt=""></a></div>
+        </div>
+        <h2 class="d-flex align-items-end justify-content-between text-light">捕魚機試玩<a class="more-wd" href="https://djdl777.com?ad=ataseo" target="_self">更多...</a></h2>
+        <div class="row position-relative mx-auto w-100">
+            <div class="col-12 col-md mb-3"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/五龙捕鱼.gif" alt=""></a></div>
+            <div class="col-12 col-md mb-3"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/开心捕鱼.gif" alt=""></a></div>
+            <div class="col-12 col-md ph-none"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/猎龙大亨.gif" alt=""></a></div>
+            <div class="col-12 col-md ph-none"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/财神捕魚.gif" alt=""></a></div>
+        </div>
+        <h2 class="d-flex align-items-end justify-content-between text-light">真人娱乐試玩<a class="more-wd" href="https://djdl777.com?ad=ataseo" target="_self">更多...</a></h2>
+        <div class="row position-relative mx-auto w-100">
+            <div class="col-12 col-md mb-3"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/真人娱乐1.png" alt=""></a></div>
+            <div class="col-12 col-md mb-3"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/真人娱乐2.png" alt=""></a></div>
+            <div class="col-12 col-md ph-none"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/真人娱乐3.png" alt=""></a></div>
+            <div class="col-12 col-md ph-none"><a href="https://djdl777.com?ad=ataseo" target="_self"><img class="w-100 border-10" src="images/真人娱乐4.png" alt=""></a></div>
         </div>
     </div>
 
+    <div id="page" class="container-fluid p-0 h-400px overflow-hidden">
+        <div class="row position-relative mx-auto w-100 h-100">
+            <div class="col-12 col-md-6 position-relative word-box d-flex align-items-center py-5 before left">
+                <div id="carouselExampleIndicators1" class="carousel slide w-100 overflow-hidden" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/ph-img1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/ph-img2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/ph-img3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 word-box d-flex flex-column justify-content-center right">
+                <h2 class="w-100 mb-4">
+                    <p class="m-0 text-shadow font-weight-bolder">玩游戏，来大吉大利</p>
+                    <p class="m-0 text-shadow font-weight-bolder">随时随刻玩你想玩</p>
+                </h2>
+                <h4 class="w-100 mb-4 text-light">最新游戏抢先体验，海量游戏完美适配。无需漫长等待，下载安装30秒即可玩。</h4>
+                <a class="go-btn text-center font-weight-bold text-dark a-none download-hover" href="https://djdl777.com?ad=ataseo" target="_self">立即前往</a>
+            </div>
+        </div>
+    </div>
+        
+
     <script src="js/jquery-3.5.1.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js" async></script>
-    <script src="js/feedbackwrap.js" async></script>
+    <script>
+        let scroll = document.querySelector('#page0').clientHeight + (document.querySelector('#page1').clientHeight / 2);
+        
+
+        window.addEventListener('scroll', function(){
+            if (window.pageYOffset > scroll){
+                document.querySelector('#page').classList.add('move');
+            }else{
+                document.querySelector('#page').classList.remove('move');
+            }
+        },false)
+    </script>
 </body>
 </html>
